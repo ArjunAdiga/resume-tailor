@@ -1,0 +1,119 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge \scshape Jordan Riley} \\ \vspace{1pt}
+  \small Austin, TX $|$ (555) 010-1234 $|$ \href{mailto:jordan.riley@example.com}{jordan.riley@example.com} \\
+  \href{https://linkedin.com/in/jordanriley-example}{linkedin.com/in/jordanriley-example} $|$
+  \href{https://github.com/jordanriley-example}{github.com/jordanriley-example}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Example University}{Austin, TX}
+      {B.S. Computer Science, Minor in Design}{Aug. 2020 -- May 2024}
+      \resumeItemListStart
+        \resumeItem{Coursework: Data Structures, Web Development, Human-Computer Interaction.}
+        \resumeItem{Graduated with honors; GPA: 3.6/4.0.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Example Co.}{Austin, TX}
+      {Frontend Engineer Intern}{June 2023 -- Aug. 2023}
+      \resumeItemListStart
+        \resumeItem{Built reusable React components for a customer dashboard used by internal teams.}
+        \resumeItem{Improved page load time by 20\% by splitting bundles and deferring non-critical CSS.}
+        \resumeItem{Wrote Vitest unit tests for form validation and fixed accessibility issues found in review.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Example Lab}{Austin, TX}
+      {Student Web Developer}{Sep. 2022 -- May 2024}
+      \resumeItemListStart
+        \resumeItem{Maintained a TypeScript and Next.js site for a research group, shipping weekly updates.}
+        \resumeItem{Collaborated with a designer to implement responsive layouts from Figma mockups.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Task Board} $|$ \emph{TypeScript, React, CSS}}{2024}
+      \resumeItemListStart
+        \resumeItem{Created a drag-and-drop task board with keyboard-accessible controls.}
+        \resumeItem{Added browser storage for saved tasks and documented setup steps in the README.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Reading List} $|$ \emph{Next.js, Tailwind CSS}}{2023}
+      \resumeItemListStart
+        \resumeItem{Built a responsive reading tracker with search, filters, and a saved-books view.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Languages}{: TypeScript, JavaScript, HTML, CSS} \\
+      \textbf{Frameworks}{: React, Next.js, Tailwind CSS} \\
+      \textbf{Tools}{: Git, Vitest, Figma, VS Code} \\
+      \textbf{Concepts}{: Accessibility, Responsive Design, Component Design}
+    }}
+  \end{itemize}
+
+\end{document}

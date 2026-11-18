@@ -1,0 +1,27 @@
+Frontend Engineer - Northstar Labs (Remote)
+
+About the role
+Northstar Labs builds tooling for small clinical teams. We are looking for a frontend engineer who cares about clarity, accessibility, and fast interfaces. You will work with designers and product managers to ship customer-facing features.
+
+What you will do
+- Build and maintain customer-facing features in React and TypeScript.
+- Turn Figma designs into responsive, accessible interfaces with modern CSS.
+- Work in our Next.js application and help improve page load performance.
+- Write focused unit tests and participate in code review.
+
+What we are looking for
+- 2+ years of professional frontend experience.
+- Strong React, TypeScript, HTML, and CSS skills.
+- Experience with Next.js and component-based design.
+- Familiarity with accessibility standards and responsive layouts.
+- Comfort writing unit tests with Vitest or a similar framework.
+- Clear written communication and attention to detail.
+
+Nice to have
+- Experience with GraphQL APIs and Apollo Client.
+- Familiarity with Redux for state management.
+- Node.js service experience and basic Docker knowledge.
+- Exposure to AWS and CI/CD pipelines.
+- Experience with Playwright for end-to-end testing.
+
+We are an equal opportunity employer. Applicants from all backgrounds are welcome.
