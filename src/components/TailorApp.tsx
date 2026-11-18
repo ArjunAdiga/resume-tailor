@@ -23,7 +23,7 @@ export default function TailorApp({ mode, sampleTex, sampleJd }: Props) {
       {mode === 'personal' && <a className="text-sm underline" href="/applications">Applications</a>}
       {mode === 'demo' && (
         <p className="text-xs text-zinc-500">
-          Demo mode: resume and job text are sent to the Gemini API and are not stored.
+          Your text is sent to Google&apos;s Gemini API to generate suggestions. Nothing is stored by this app. Use the sample or run the app locally for sensitive resumes.
         </p>
       )}
       {health && (

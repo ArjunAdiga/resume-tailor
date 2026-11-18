@@ -1,14 +1,14 @@
 # DONE.md
 
-- [ ] Upload or paste .tex and paste JD
-- [ ] Sample fallback and Try the sample
-- [ ] Present/missing keywords
-- [ ] Score before and after
-- [ ] Per-bullet diff with accept/reject
-- [ ] Download resume.tailored.tex
-- [ ] Guards tested
-- [ ] Clear error when Ollama is down
-- [ ] History (personal)
-- [ ] PDF (personal)
-- [ ] Demo mode with limits
-- [ ] README with diagram
+- [x] Upload or paste .tex and paste JD
+- [x] Sample fallback and Try the sample
+- [x] Present/missing keywords
+- [x] Score before and after
+- [x] Per-bullet diff with accept/reject
+- [x] Download resume.tailored.tex
+- [x] Guards tested
+- [x] Clear error when Ollama is down
+- [x] History (personal)
+- [x] PDF (personal)
+- [x] Demo mode with limits
+- [x] README with diagram

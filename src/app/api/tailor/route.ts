@@ -1,7 +1,9 @@
 import { z } from 'zod'
 import { checkBullet } from '../../../lib/guards'
 import { escape } from '../../../lib/latex/escape'
+import { checkDemoLimits } from '../../../lib/limits'
 import { getProvider } from '../../../lib/llm'
+import { getMode } from '../../../lib/mode'
 import { rewriteBulletSystem, rewriteBulletUser } from '../../../lib/prompts/rewriteBullet'
 import { rewriteSchema } from '../../../lib/schemas'
 
@@ -20,21 +22,35 @@ type ResponseBody = {
   reasons: string[]
 }
 
+function respond(status: number, body: unknown, started: number): Response {
+  if (getMode() === 'demo') console.log(JSON.stringify({ status, ms: Date.now() - started }))
+  return Response.json(body, { status })
+}
+
 export async function POST(request: Request): Promise<Response> {
+  const started = Date.now()
   let payload: unknown
   try {
     payload = await request.json()
   } catch {
-    return Response.json({ error: 'Expected a JSON body.' }, { status: 400 })
+    return respond(400, { error: 'Expected a JSON body.' }, started)
   }
 
   const parsed = requestSchema.safeParse(payload)
   if (!parsed.success) {
-    return Response.json(
+    return respond(
+      400,
       { error: 'Expected { id, bullet, resumeText, matchedKeywords }.' },
-      { status: 400 },
+      started,
     )
   }
+
+  const limited = await checkDemoLimits(request, {
+    resume: parsed.data.resumeText,
+    jd: '',
+    bullets: 1,
+  })
+  if (!limited.ok) return respond(limited.status, { error: limited.error }, started)
 
   const { id, bullet, resumeText, matchedKeywords } = parsed.data
   let reasons: string[] = []
@@ -63,7 +79,7 @@ export async function POST(request: Request): Promise<Response> {
         status: 'rewritten',
         reasons: [],
       }
-      return Response.json(body)
+      return respond(200, body, started)
     }
     reasons = guard.reasons
   }
@@ -75,5 +91,5 @@ export async function POST(request: Request): Promise<Response> {
     status: 'kept',
     reasons,
   }
-  return Response.json(kept)
+  return respond(200, kept, started)
 }
